@@ -10,7 +10,8 @@ class SearcBar extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    // call cb from parent component
+    /* call prop when form submit, tell parent comp what current search is */
+    this.props.onFormSubmit(this.state.term)
   };
 
   render() {
